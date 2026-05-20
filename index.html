@@ -3,69 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aryan Kumar - personal resume website">
+  <title>Aryan Kumar | Resume</title>
   <link rel="stylesheet" href="styles.css">
-  <title>My Personal Website</title>
 </head>
 <body>
-  <header>
-    <img class="picedit" src="IMG_ARYAN lol1.ico"/>
-    <div class="topbarsection">
-      <h1>My Personal Website</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#home">
+        <img class="avatar" src="IMG_ARYAN lol1.ico" alt="Aryan Kumar">
+        <span>Aryan Kumar</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Welcome to my personal website! I am Aryan Kumar, a passionate coder with expertise in various programming languages and technologies. I love building innovative solutions and enjoy working on challenging projects.
-      </p>
-      <!--email_off-->23f3000941@ds.study.iitm.ac.in<!--/email_off-->
-      <p>
-        Connect with me on LinkedIn to learn more about my professional background and experience:
-         <a href="https://in.linkedin.com/in/aryankumarakj?trk=profile-badge" target=”_blank”>Aryan Kumar on LinkedIn</a>
-      </p>
-              
-    </div>
-  </section>
+  <main id="home">
+    <section class="hero reveal">
+      <div class="container hero-content">
+        <p class="eyebrow">Software Developer • Problem Solver</p>
+        <h1>Building smooth and interactive web experiences.</h1>
+        <p>
+          I’m Aryan Kumar, a tech enthusiast focused on web development, systems, and programming.
+          I enjoy turning ideas into useful products.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Hire Me</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <!-- Add your projects here -->
-      <h2>soon i will be adding multiple projects</h2>
-      <h2>for now you can visit my github page <a href="http://github.com/aryankumarakj" target=”_blank”>My git hub page</a></h2>
-    </div>
-  </section>
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I work across frontend and backend stacks and enjoy building clean, reliable, and user-first applications.
+          My interests include full-stack web development, AI-powered products, and cloud technologies.
+        </p>
+      </div>
+    </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>
-        Feel free to reach out to me with any inquiries or collaboration opportunities. You can message me at <a href="https://twitter.com/aryankumarakj">My twitter</a>.
-      </p>
-      <label for=name value="Name" >Name </label>
-      <input type="text"   required />
-      <label for=number value="number">Number</label>label>
-      <input type="number"  maxlength=10 required />
-      
-    </div>
-  </section>
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <div class="filters" role="group" aria-label="Project filter">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="web">Web</button>
+            <button class="filter" data-filter="ai">AI</button>
+            <button class="filter" data-filter="data">Data</button>
+          </div>
+        </div>
 
-  <footer>
+        <div class="cards" id="project-cards">
+          <article class="card" data-tags="web">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal website built with HTML, CSS, and JavaScript.</p>
+          </article>
+          <article class="card" data-tags="web data">
+            <h3>Data Visualizer</h3>
+            <p>Interactive visualizations using D3.js with a Flask API backend.</p>
+          </article>
+          <article class="card" data-tags="ai">
+            <h3>AI Chatbot</h3>
+            <p>Conversational bot powered by Python and NLP workflows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>HTML, CSS, JavaScript</li>
+          <li>Python, Node.js, Flask</li>
+          <li>Git, GitHub, Linux</li>
+          <li>Responsive and accessible UI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:23f3000941@ds.study.iitm.ac.in">23f3000941@ds.study.iitm.ac.in</a></p>
+        <p>
+          <a href="https://github.com/aryankumarakj" target="_blank" rel="noopener noreferrer">GitHub</a> •
+          <a href="https://in.linkedin.com/in/aryankumarakj?trk=profile-badge" target="_blank" rel="noopener noreferrer">LinkedIn</a> •
+          <a href="https://twitter.com/aryankumarakj" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-      &copy; 2023 Aryan Kumar | All rights reserved
+      <p>© <span id="year"></span> Aryan Kumar. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    const navLinks = [...document.querySelectorAll('.nav a')];
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const filters = [...document.querySelectorAll('.filter')];
+    const cards = [...document.querySelectorAll('#project-cards .card')];
+
+    filters.forEach((button) => {
+      button.addEventListener('click', () => {
+        filters.forEach((b) => b.classList.remove('active'));
+        button.classList.add('active');
+        const selected = button.dataset.filter;
+
+        cards.forEach((card) => {
+          const tags = card.dataset.tags || '';
+          const show = selected === 'all' || tags.includes(selected);
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    });
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    revealElements.forEach((item) => observer.observe(item));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
